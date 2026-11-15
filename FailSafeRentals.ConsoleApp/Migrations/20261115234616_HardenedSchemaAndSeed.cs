@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace FailsSafeRentals.ConsoleApp.Migrations;
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
+namespace FailSafeRentals.ConsoleApp.Migrations;
 
 /// <inheritdoc />
-public partial class _20261115231915_HardenedSchema : Migration
+public partial class _20261115234616_HardenedSchemaAndSeed : Migration
 {
     /// <inheritdoc />
     protected override void Up(MigrationBuilder migrationBuilder)
@@ -109,6 +111,16 @@ public partial class _20261115231915_HardenedSchema : Migration
                     principalTable: "Vehicles",
                     principalColumn: "Id",
                     onDelete: ReferentialAction.Cascade);
+            });
+
+        migrationBuilder.InsertData(
+            table: "ExtraFeatures",
+            columns: new[] { "Id", "DailyPrice", "Name" },
+            values: new object[,]
+            {
+                { 1, 75m, "GPS Navigation" },
+                { 2, 120m, "Takbox Thule" },
+                { 3, 50m, "Barnstol" }
             });
 
         migrationBuilder.CreateIndex(
