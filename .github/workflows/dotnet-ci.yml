@@ -14,7 +14,6 @@ jobs:
           dotnet-version: '11.0.x'
       - name: Build Release & Generate SQL Script
         run: |
-          dotnet build FailSafeRentals.ConsoleApp.csproj --configuration Release
+          dotnet build FailSafeRentals.ConsoleApp/FailSafeRentals.ConsoleApp.csproj --configuration Release
           dotnet tool install --global dotnet-ef
           dotnet ef migrations script --idempotent -o release-migration.sql --project FailSafeRentals.ConsoleApp/FailSafeRentals.ConsoleApp.csproj
-
