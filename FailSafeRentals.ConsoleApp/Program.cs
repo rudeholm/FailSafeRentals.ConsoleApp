@@ -1,4 +1,4 @@
-﻿using FailsSafeRentals.ConsoleApp.Data;
+﻿using FailSafeRentals.ConsoleApp.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace FailSafeRentals.ConsoleApp;

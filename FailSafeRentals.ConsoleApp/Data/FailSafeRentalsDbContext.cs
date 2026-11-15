@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace FailsSafeRentals.ConsoleApp.Data
+namespace FailSafeRentals.ConsoleApp.Data
 {
     public class FailSafeRentalsDbContext : DbContext
     {
